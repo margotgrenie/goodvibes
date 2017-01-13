@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Good Vibes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Replayname</th>
+      <th>Replaydate</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @good_vibes.each do |good_vibe| %>
+      <tr>
+        <td><%= good_vibe.ReplayName %></td>
+        <td><%= good_vibe.ReplayDate %></td>
+        <td><%= link_to 'Show', good_vibe %></td>
+        <td><%= link_to 'Edit', edit_good_vibe_path(good_vibe) %></td>
+        <td><%= link_to 'Destroy', good_vibe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Good Vibe', new_good_vibe_path %>

@@ -1,0 +1,1 @@
+json.array! @good_vibes, partial: 'good_vibes/good_vibe', as: :good_vibe

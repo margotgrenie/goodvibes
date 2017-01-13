@@ -1,0 +1,20 @@
+# == Schema Information
+#
+# Table name: good_vibes
+#
+#  id         :integer          not null, primary key
+#  ReplayName :string
+#  ReplayDate :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ReplayName: MyString
+  ReplayDate: MyString
+
+two:
+  ReplayName: MyString
+  ReplayDate: MyString

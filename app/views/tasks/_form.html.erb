@@ -1,0 +1,42 @@
+<%= form_for(task) do |f| %>
+  <% if task.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(task.errors.count, "error") %> prohibited this task from being saved:</h2>
+
+      <ul>
+      <% task.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :deadline %>
+    <%= f.date_select :deadline %>
+  </div>
+
+  <div class="field">
+    <%= f.label :priority %>
+    <%= f.number_field :priority %>
+  </div>
+
+<div class="field">
+    <%= f.label :state %>
+    <%= f.select(:state, options_for_select([['To Do', 0], ['Doing', 1], ['Done', 2]])) %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

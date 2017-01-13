@@ -1,0 +1,27 @@
+<%= form_for(good_vibe) do |f| %>
+  <% if good_vibe.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(good_vibe.errors.count, "error") %> prohibited this good_vibe from being saved:</h2>
+
+      <ul>
+      <% good_vibe.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ReplayName %>
+    <%= f.text_field :ReplayName %>
+  </div>
+
+  <div class="field">
+    <%= f.label :ReplayDate %>
+    <%= f.text_field :ReplayDate %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

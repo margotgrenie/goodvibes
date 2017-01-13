@@ -1,0 +1,1 @@
+json.partial! "good_vibes/good_vibe", good_vibe: @good_vibe
